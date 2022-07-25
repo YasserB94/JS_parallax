@@ -23,7 +23,8 @@
     background-size: contain;
     background-repeat: repeat-x;
     background-position: 0px 0px;
-
+    bottom: 0;
+    position: absolute;
 }
 .trees--and--bushes{
     z-index: 50;
@@ -40,5 +41,20 @@
 
 }
 .trees--distant{
-    
+    z-index: 40;
+    background-image: url(./assets/challenge-images/trees-distant.png);
+    animation: animateDistantTrees 30s linear infinite;
+}
+@keyframes animateDistantTrees{
+    from{background-position: 0px 0px;}
+    to{background-position: 100% 0px;}
+}
+.hill--one{
+    z-index: 20;
+    background-image: url(./assets/challenge-images/hill-v1.png);
+    animation: animateHillOne 60s linear infinite;
+}
+@keyframes animateHillOne {
+    from{background-position: 0px 0px;}
+    to{background-position: -100% 0px;}
 }
