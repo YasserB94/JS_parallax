@@ -47,7 +47,7 @@
 }
 @keyframes animateDistantTrees{
     from{background-position: 0px 0px;}
-    to{background-position: 100% 0px;}
+    to{background-position: -100% 0px;}
 }
 .hill--one{
     z-index: 20;
@@ -55,6 +55,15 @@
     animation: animateHillOne 60s linear infinite;
 }
 @keyframes animateHillOne {
+    from{background-position: 0px 0px;}
+    to{background-position: -100% 0px;}
+}
+.hill--two{
+    z-index: 21;
+    background-image: url(./assets/challenge-images/hill-v2.png);
+    /* animation: animateHillTwo 45s linear infinite; */
+}
+@keyframes animateHillTwo {
     from{background-position: 0px 0px;}
     to{background-position: -100% 0px;}
 }
