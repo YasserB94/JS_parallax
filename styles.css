@@ -3,13 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+@keyframes moveLeft {
+    from{background-position: 0px 0px;
+}
+    to{background-position: -100% 0px;
+    }
+}
 .parallax--container{
     z-index: -1;
     width: 100%;
     height: 500px;
     position: relative;
     transform-style: preserve-3d;
-
 }
 .background{
     width: 100%;
@@ -26,44 +31,61 @@
     bottom: 0;
     position: absolute;
 }
+.ground{
+    z-index: 100;
+    background-image: url(./assets/challenge-images/ground.png);
+    animation: moveLeft 10s linear infinite;
+}
 .trees--and--bushes{
     z-index: 50;
     background-image: url(./assets/challenge-images/trees-and-bushes.png);
-    animation: animateTreesAndBushes 10s linear infinite;
+    animation: moveLeft 10s linear infinite;
 }
-@keyframes animateTreesAndBushes{
-    from{
-        background-position: 0px 0px;
-    }
-    to{
-        background-position: -100% 0px;
-    }
+.hedge{
+    z-index: 45;
+    background-image: url(./assets/challenge-images/bushes-hedge.png);
+    animation: moveLeft 30s linear infinite;
+}
 
-}
 .trees--distant{
     z-index: 40;
     background-image: url(./assets/challenge-images/trees-distant.png);
-    animation: animateDistantTrees 30s linear infinite;
-}
-@keyframes animateDistantTrees{
-    from{background-position: 0px 0px;}
-    to{background-position: -100% 0px;}
+    animation: moveLeft 30s linear infinite;
 }
 .hill--one{
     z-index: 20;
     background-image: url(./assets/challenge-images/hill-v1.png);
-    animation: animateHillOne 60s linear infinite;
-}
-@keyframes animateHillOne {
-    from{background-position: 0px 0px;}
-    to{background-position: -100% 0px;}
+    animation: moveLeft 60s linear infinite;
 }
 .hill--two{
     z-index: 21;
     background-image: url(./assets/challenge-images/hill-v2.png);
-    /* animation: animateHillTwo 45s linear infinite; */
+    animation: moveLeft 45s linear infinite;
 }
-@keyframes animateHillTwo {
-    from{background-position: 0px 0px;}
-    to{background-position: -100% 0px;}
+.clouds{
+    z-index: 20;
+    background-image: url(./assets/challenge-images/clouds.png);
+    animation: moveLeft 28s linear infinite;
+}
+.clouds--distant--one{
+    z-index: 19;
+    background-image: url(./assets/challenge-images/clouds-distant-500.png);
+    animation: moveLeft 120s linear infinite;
+}
+.clouds--distant--two{
+    z-index: 1;
+    opacity: 50%;
+    background-image: url(./assets/challenge-images/clouds-texture-big.png);
+    animation: moveLeft 90s linear infinite;
+}
+.runner{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-image: url(./assets/challenge-images/run.gif);
 }
